@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	var HeightArray=[130,210,340];
+	var WidthArray=[210,340,550,323];
+	var TextArray=["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi repellat placeat adipisci, commodi soluta dolor eaque sed temporibus tenetur quam ratione ullam molestias necessitatibus hic, non quo eius quaerat!",
+
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi repellat placeat adipisci, commodi soluta dolor eaque sed temporibus tenetur quam ratione ullam molestias necessitatibus hic, non quo eius quaerat!udgfslagif efhcwhfue cwfh cwuh vcwiu",
+
+	"Quibusdam eligendi repellat placeat adipisci, commodi soluta dolor eaque sed temporibus tenetur quam ratione ullam molestias necessitatibus hic, non quo eius quaerat!"];
+
+
+	var ColorArray=["grey","brown","cadetblue"];
+
+	var myDiv = function(width, height,color,text) 
+	{
+		this.width=width,
+		this.height=height,
+		this.color=color,
+		this.text=text;
+
+		this.createDiv=function()
+		{
+			document.write("<div style='padding:10px; width:"+this.width+"px; height:"+this.height+"px;background-color:"+this.color+"; overflow:hidden;'>"+this.text+"</div>");
+		}
+	}	
+
+	for(var i=0;i<WidthArray.length;i++)
+	{
+		if(WidthArray.length==HeightArray.length && HeightArray.length==ColorArray.length && ColorArray.length==TextArray.length){
+		var Ndiv=new myDiv(WidthArray[i],HeightArray[i],ColorArray[i],TextArray[i]);
+		Ndiv.createDiv();
+		document.write("<br>");}
+		else{
+			document.write("arrays are not of the same size !");
+			break;
+		}
+	}
+
+</script>
+
+</body>
+</html>
